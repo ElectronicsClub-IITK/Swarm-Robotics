@@ -1,7 +1,7 @@
 # This is a Basic Assignment on Python 
 ## Please Do the Assignment in the Following Order
 
-## Generate a PR from a Brach with Your Name and Mention your Roll Number in your PR
+### Generate a PR with Your Name in your PR Description
 - Objects and Data Structures 
 - Chained Comparison Operators 
 - Statements 
