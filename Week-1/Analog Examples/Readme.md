@@ -16,3 +16,4 @@
 
  ## AC Analysis 
  - It is an Incremental Analysis and the Output Input Relation are in Incremental Terms
+ - AC analyisis of Components [An Internal Link](https://www.youtube.com/watch?v=iXjdgcEAmUE)
