@@ -1,0 +1,30 @@
+********************************************************************************
+***              Micro-Cap 12.0.2.1 (32 bit) Evaluation Version              ***
+***                                                                          ***
+***                                                                          ***
+***                    DC Analysis of DC Current Limiter                     ***
+***                           13-05-2024 21:36:12                            ***
+********************************************************************************
+Limits
+======
+Variable 1 Method        Linear
+Variable 1 Name          V1
+Variable 1 Range         35,-35,1
+Variable 2 Method        None
+Variable 2 Name          
+Variable 2 Range         
+Temperature              Linear 27
+Number of Points         51
+Maximum Change %         5
+Run Options              Normal
+Auto Scale Ranges        Off
+Accumulate Plots         Off
+Ignore Expression Errors Off
+
+
+*****************************************************
+***                Temperature=27                 ***
+*****************************************************
+
+Temperature=27
+

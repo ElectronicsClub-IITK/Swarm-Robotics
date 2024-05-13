@@ -2469,3 +2469,4 @@ Source Stepping=0,0
 Diagonal Gmin Stepping=0,0
 Junction Gmin Stepping=0,0
 Pseudo Transient=0,0
+;$SpiceType=AMBIGUOUS

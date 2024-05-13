@@ -1,0 +1,25 @@
+********************************************************************************
+***              Micro-Cap 12.0.2.1 (32 bit) Evaluation Version              ***
+***                                                                          ***
+***                                                                          ***
+***               Transient Analysis of Temperature Variation                ***
+***                                                                          ***
+********************************************************************************
+Limits
+======
+Maximum Run Time           1u
+Output Start Time (tstart) 0
+Maximum Time Step          1n
+Number of Points           50
+Temperature                Linear 27
+Retrace Runs               1
+Run Options                Normal
+State Variables            Leave
+Operating Point            Off
+Operating Point Only       Off
+Auto Scale Ranges          Off
+Accumulate Plots           Off
+Fixed Time Step            Off
+Periodic Steady State      Off
+Ignore Expression Errors   Off
+
