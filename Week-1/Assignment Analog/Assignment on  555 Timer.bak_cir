@@ -248,7 +248,7 @@ Color=#FF0000
 
 [Attr]
 ON=8,11,RESISTANCE
-V=4k
+V=2k
 Style=8192
 Color=#FF0000
 
@@ -269,7 +269,7 @@ Color=#FF0000
 
 [Attr]
 ON=8,11,RESISTANCE
-V=3k
+V=4k
 Style=8192
 Color=#FF0000
 
@@ -691,7 +691,7 @@ Scale 0=1
 Scale 1=1
 Scale 2=1
 Scale 3=0.66666666666666663
-Px=551,111
+Px=280,246
 WinBackGround Color=#FFFFFF
 Select Color=#00FFFF
 Anchor Color=#000000

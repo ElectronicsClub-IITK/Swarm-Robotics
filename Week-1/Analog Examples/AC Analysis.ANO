@@ -1,0 +1,138 @@
+********************************************************************************
+***              Micro-Cap 12.0.2.1 (32 bit) Evaluation Version              ***
+***                                                                          ***
+***                                                                          ***
+***                        AC Analysis of AC Analysis                        ***
+***                                                                          ***
+********************************************************************************
+Limits
+======
+Frequency Range          Log 1e8,1e5
+Number of Points         200
+Temperature              Linear 27
+Maximum Change %         1
+Noise Input              V1
+Noise Output             OUT
+Run Options              Normal
+State Variables          Zero
+Operating Point          On
+Auto Scale Ranges        Off
+Accumulate Plots         Off
+Ignore Expression Errors Off
+
+
+*****************************************************
+***                Temperature=27                 ***
+*****************************************************
+
+Temperature=27
+
+Model parameters for devices of type Capacitor
+==============================================
+Instance:              C1   
+Using model:         CAP1   
+C                   1.00 (*)
+LS              UNDEFINED(*)
+RP              UNDEFINED(*)
+RS              UNDEFINED(*)
+T_ABS           UNDEFINED(*)
+T_MEASURED      UNDEFINED(*)
+T_REL_GLOBAL    UNDEFINED(*)
+T_REL_LOCAL     UNDEFINED(*)
+TC1               100.00u   
+TC2                 0.00 (*)
+VC1                 0.00 (*)
+VC2                 0.00 (*)
+(*) Default Parameter
+
+
+
+Model parameters for devices of type Inductor
+=============================================
+Instance:              L1   
+Using model:         IND2   
+CP              UNDEFINED(*)
+IL1                 0.00 (*)
+IL2                 0.00 (*)
+L                   1.00    
+RS              UNDEFINED(*)
+T_ABS           UNDEFINED(*)
+T_MEASURED      UNDEFINED(*)
+T_REL_GLOBAL    UNDEFINED(*)
+T_REL_LOCAL     UNDEFINED(*)
+TC1                 1.00m   
+TC2                 0.00 (*)
+(*) Default Parameter
+
+
+
+DC Operating Point Voltages
+===========================
+Node         Voltage  Node         Voltage 
+OUT            0.00   IN             0.00  
+
+DC Operating Point Inductor Current
+===================================
+Inductor     Current 
+L1             0.00  
+
+
+Operating Point for Devices of Type Resistor
+============================================
+Instance:                  R1
+V                       0.00 
+Power DC Terms:
+PD                      0.00 
+
+DC Pin Currents:
+Ir                      0.00 
+
+Device Variables:
+tc1                    10.00u
+tc2                     0.00 
+
+
+
+Operating Point for Devices of Type Inductor
+============================================
+Instance:                  L1
+Using model:             IND2
+V                       0.00 
+Power DC Terms:
+PS                      0.00 
+
+DC Pin Currents:
+Il                      0.00 
+
+Device Variables:
+ic                      0.00 
+
+
+
+Operating Point for Devices of Type Capacitor
+=============================================
+Instance:                  C1
+Using model:             CAP1
+V                       0.00 
+Power DC Terms:
+PS                      0.00 
+
+DC Pin Currents:
+Ic                      0.00 
+
+Device Variables:
+ic                      0.00 
+
+
+
+Operating Point for Devices of Type SPICE Source
+================================================
+Instance:                 V1
+V                      0.00 
+Power DC Terms:
+PG                     0.00 
+
+DC Pin Currents:
+ISource                0.00 
+
+
