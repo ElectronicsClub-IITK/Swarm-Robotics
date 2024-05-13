@@ -68,6 +68,7 @@ Name=555
 Definition=Macro
 Shape=555
 Mask=20480
+Used=2
 memo=555 Timer Macro
 Label Offset=87,72,-20,88
 PinCnt=8
@@ -84,8 +85,8 @@ Pin="GND",a,5,13,3,-3
 Name=Ground
 Definition=Ground
 Shape=Ground
-Mask=513
-Used=264
+Mask=1793
+Used=286
 memo=Ground
 Label Offset=0,0,0,0
 PinCnt=1
@@ -95,8 +96,8 @@ Pin="PinA",0,0,-3,-7
 Name=Resistor
 Definition=Resistor
 Shape=Resistor
-Mask=6145
-Used=158
+Mask=6401
+Used=168
 memo=Resistor
 Label Offset=18,6,8,11
 PinCnt=2
@@ -108,7 +109,7 @@ Name=Capacitor
 Definition=Capacitor
 Shape=Capacitor
 Mask=6145
-Used=23
+Used=33
 memo=Capacitor
 Label Offset=16,12,12,12
 PinCnt=2
@@ -119,8 +120,8 @@ Pin="Minus",0,0,-14,-5
 Name=Battery
 Definition=Battery
 Shape=Battery
-Mask=6145
-Used=54
+Mask=7425
+Used=61
 memo=Battery
 Label Offset=19,7,10,13
 PinCnt=2
@@ -146,7 +147,7 @@ Line=-24,56,232,56
 Line=-24,36,232,36
 
 [Circuit]
-Window Placement=2,3, -1,-1, -8,-31, 0,104,1123,472
+Window Placement=2,3, -1,-1, -8,-31, 104,104,1253,472
 Default Object=Color=#000080
 Default Object Font=Height=-15,FStyle=0,Color=#000080,Name=Arial
 Default Object Apply Border To Text=No
@@ -248,7 +249,7 @@ Color=#FF0000
 
 [Attr]
 ON=8,11,RESISTANCE
-V=4k
+V=R2
 Style=8192
 Color=#FF0000
 
@@ -269,7 +270,7 @@ Color=#FF0000
 
 [Attr]
 ON=8,11,RESISTANCE
-V=3k
+V=R1
 Style=8192
 Color=#FF0000
 
@@ -691,7 +692,7 @@ Scale 0=1
 Scale 1=1
 Scale 2=1
 Scale 3=1
-Px=275,185
+Px=190,226
 WinBackGround Color=#FFFFFF
 Select Color=#00FFFF
 Anchor Color=#000000
