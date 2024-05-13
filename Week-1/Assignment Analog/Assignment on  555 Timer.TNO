@@ -1,0 +1,29 @@
+********************************************************************************
+***              Micro-Cap 12.0.2.1 (32 bit) Evaluation Version              ***
+***                                                                          ***
+***                                                                          ***
+***              Transient Analysis of Assignment on  555 Timer              ***
+***                                                                          ***
+********************************************************************************
+Limits
+======
+Maximum Run Time           5M
+Output Start Time (tstart) 0
+Maximum Time Step          0
+Number of Points           0
+Temperature                Linear 27
+Retrace Runs               1
+Run Options                Normal
+State Variables            Zero
+Operating Point            Off
+Operating Point Only       Off
+Auto Scale Ranges          Off
+Accumulate Plots           Off
+Fixed Time Step            Off
+Periodic Steady State      Off
+Ignore Expression Errors   Off
+
+
+Digital Warning
+Input voltage hazard on ATOD interface device X1.X1$.O1.
+Analog input node X1.X1$.AIN is at 3.748e+000 volts at T=5.000e-010
