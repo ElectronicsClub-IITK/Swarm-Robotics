@@ -1,0 +1,67 @@
+********************************************************************************
+***              Micro-Cap 12.0.2.1 (32 bit) Evaluation Version              ***
+***                                                                          ***
+***                                                                          ***
+***                   Dynamic DC of Under Voltage Lockout                    ***
+***                           17-05-2024 00:40:51                            ***
+********************************************************************************
+
+*****************************************************
+***                Temperature=27                 ***
+*****************************************************
+
+Temperature=27
+
+DC Operating Point Voltages
+===========================
+Node         Voltage  Node         Voltage 
+1            10.000   2             0.000  
+
+DC Operating Point Inductor Current
+===================================
+Inductor     Current 
+L1            1.000m 
+
+
+Operating Point for Devices of Type Resistor
+============================================
+Instance:                R1
+V                   10.000 
+Power DC Terms:
+PD                  10.000m
+
+DC Pin Currents:
+Ir                   1.000m
+
+Device Variables:
+tc1                  0.000 
+tc2                  0.000 
+
+
+
+Operating Point for Devices of Type Inductor
+============================================
+Instance:                L1
+V                    0.000 
+Power DC Terms:
+PS                   0.000 
+
+DC Pin Currents:
+Il                   1.000m
+
+Device Variables:
+ic                   0.000 
+
+
+
+Operating Point for Devices of Type SPICE Source
+================================================
+Instance:               V1
+V                  10.000 
+Power DC Terms:
+PG                 10.000m
+
+DC Pin Currents:
+ISource            -1.000m
+
+
