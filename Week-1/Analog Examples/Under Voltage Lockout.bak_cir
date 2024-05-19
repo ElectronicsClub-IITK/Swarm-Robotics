@@ -7,16 +7,8 @@ Shape Version=11.00
 Screen=1536,864
 MCAPVersion=12.0.2.1
 Key ID=Demo
-NLCnt=7
-TXCnt=0
-
-[shapedef]
-Name=Battery
-Line=0,0,22,0
-Line=22,-3,22,3
-Line=26,-7,26,7
-Line=26,0,48,0
-Current=32,8,16,8
+NLCnt=15
+TXCnt=5
 
 [shapedef]
 Name=Ground
@@ -26,34 +18,23 @@ Line=18,-4,18,4
 Line=24,0,24,0
 
 [shapedef]
-Name=Inductor
-Line=42,0,48,0
-Line=0,0,5,0
-Arc=5,-7,17,7 , 11,-7,5,0
-Arc=13,-7,25,7 , 19,-7,13,0
-Arc=29,-7,41,7 , 35,-7,29,0
-Arc=21,-7,33,7 , 27,-7,21,0
-Arc=6,-7,18,7 , 18,0,12,-7
-Arc=14,-7,26,7 , 26,0,20,-7
-Arc=22,-7,34,7 , 34,0,28,-7
-Arc=30,-7,42,7 , 42,0,36,-7
-Line=11,-7,12,-7
-Line=19,-7,20,-7
-Line=27,-7,28,-7
-Line=35,-7,36,-7
-Arc=13,-4,17,2 , 13,-1,15,2
-Arc=29,-4,33,2 , 29,-1,31,2
-Arc=21,-4,25,2 , 21,-1,23,2
-Arc=14,-4,18,2 , 16,2,18,-1
-Arc=30,-4,34,2 , 32,2,34,-1
-Arc=22,-4,26,2 , 24,2,26,-1
-Line=15,2,16,2
-Line=23,2,24,2
-Line=31,2,32,2
-Line=5,5,9,5
-Line=41,5,41,9
-Line=39,7,43,7
-Current=32,8,16,8
+Name=Plus.root
+Line=-2,0,2,0
+Line=0,-2,0,2
+
+[shapedef]
+Name=Ref3a
+Rectangle=-8,-8,72,40
+FColor=None
+Line=-8,16,-24,16
+Line=72,16,88,16
+Line=32,40,32,56
+Text="GND"
+TextInfo=20,26,44,38 , -10,0,"Arial"
+Text="IN"
+TextInfo=-4,10,9,24 , -11,0,"Arial"
+Text="OUT"
+TextInfo=44,10,69,24 , -11,0,"Arial"
 
 [shapedef]
 Name=Resistor
@@ -72,24 +53,50 @@ PolyLine=48,0
 PolyLine=48,0
 Current=32,8,16,8
 
+[shapedef]
+Name=SPICE_V
+Root="Vsource.root",0,0,0
+
+[shapedef]
+Name=Vsource.root
+Line=0,0,12,0
+Line=36,0,48,0
+Ellipse=12,-12,36,12
+FColor=None
+Line=7,5,7,9
+Root="Plus.root",41,7,0
+Current=32,16,16,16
+
 [compdef]
-Name=Battery
-Definition=Battery
-Shape=Battery
-Mask=6657
-Used=57
-memo=Battery
-Label Offset=19,7,10,13
+Name=Voltage Source
+Definition=VSpice
+Shape=SPICE_V
+Mask=4865
+Used=41
+memo=Voltage Source
+Label Offset=19,13,15,13
 PinCnt=2
-Pin="Plus",6,0,-4,-5
-Pin="Minus",0,0,-10,-5
+Pin="Plus",6,0,-5,-6
+Pin="Minus",0,0,-20,-6
+
+[compdef]
+Name=UVLO1
+Definition=Subckt
+Shape=Ref3a
+Mask=4096
+memo=Under Voltage Lock Out (UVLO) model - Christophe Basso
+Label Offset=48,43,11,20
+PinCnt=3
+Pin="1",a,-3,2,-3,-3
+Pin="2",a,11,2,-2,-3
+Pin="30",a,4,7,5,6
 
 [compdef]
 Name=Ground
 Definition=Ground
 Shape=Ground
 Mask=1793
-Used=276
+Used=286
 memo=Ground
 Label Offset=0,0,0,0
 PinCnt=1
@@ -99,25 +106,13 @@ Pin="PinA",0,0,-3,-7
 Name=Resistor
 Definition=Resistor
 Shape=Resistor
-Mask=6913
-Used=161
+Mask=6401
+Used=168
 memo=Resistor
 Label Offset=18,6,8,11
 PinCnt=2
 Pin="Plus",6,0,-10,-4
 Pin="Minus",0,0,-14,-4
-
-[compdef]
-Name=Inductor
-Definition=Inductor
-Shape=Inductor
-Mask=7425
-Used=32
-memo=Inductor
-Label Offset=18,9,11,12
-PinCnt=2
-Pin="Plus",6,0,-5,-9
-Pin="Minus",0,0,-3,-9
 
 [TitleBlockDef]
 Name=DefaultOld
@@ -138,7 +133,7 @@ Line=-24,56,232,56
 Line=-24,36,232,36
 
 [Circuit]
-Window Placement=2,3, -1,-1, -8,-31, 78,78,1227,446
+Window Placement=2,3, -1,-1, -8,-31, 0,0,791,550
 Default Object=Color=#000080
 Default Object Font=Height=-15,FStyle=0,Color=#000080,Name=Arial
 Default Object Apply Border To Text=No
@@ -150,8 +145,7 @@ PowerFormat=3
 PathDelayFormat=3
 WarningFormat=3
 GridTextFormulaFormat=3
-Window Placement in Transient Analysis=2,3, -1,-1, -8,-31, 44,0,1029,534
-Window Placement in Transient Probe=0,1, -1,-1, -8,-31, 753,0,1506,530
+Window Placement in Transient Analysis=2,3, -1,-1, -8,-31, 44,0,1029,550
 Window Placement in AC Analysis=2,3, -1,-1, -4,-23, 44,44,1029,634
 Window Placement in DC Analysis=2,3, -1,-1, -4,-23, 44,44,1029,634
 Window Placement in HmDistortion Analysis=2,3, -1,-1, -4,-23, 44,44,1029,634
@@ -160,8 +154,8 @@ Window Placement in Stability Analysis=2,3, -1,-1, -4,-23, 44,44,1029,634
 SpiceType=AMBIGUOUS
 Title_Block_Border=None
 Title_Block=False
-Show Nodes=True
-Show Voltages=True
+Show Nodes=False
+Show Voltages=False
 Show Current=False
 Show Power=False
 Show Condition=False
@@ -205,74 +199,175 @@ ON=0,55,#Field5
 V=Page $page of $maxpage
 
 [Comp]
-Name=Battery
-Px=600,136
-Rot=2
+Name=Voltage Source
+Px=120,256
+Rot=3
 
 [Attr]
-ON=-35,-21,PART
+ON=-31,-27,PART
 V=V1
 Style=8192
 
 [Attr]
-ON=-35,-35,VALUE
-V=10
+ON=-112,-41,VALUE
+V=PWL 0 0 10m 15 20m 0
+
+[Attr]
+ON=0,0,Saved_Pulse
+V=DC 0 AC 1 0 Pulse 0 5 100n 10n 10n 400n 1u
+Style=256
+
+[Wire]
+Pxs=120,256,120,264
+
+[Comp]
+Name=UVLO1
+Px=200,184
+
+[Attr]
+ON=27,-54,PART
+V=X1
 Style=8192
 
 [Attr]
-ON=0,0,PACKAGE
+ON=19,-40,NAME
+V=UVLO
+Style=8192
+
+[Attr]
+ON=-20,-27,PARAMS:
+V=VON=12 VOFF=10
+Style=8192
+
+[Attr]
+ON=0,99,$XP VON
+V=12
+Style=49152
+
+[Attr]
+ON=0,110,$XP VOFF
+V=10
+Style=49152
+
+[Attr]
+ON=0,121,$Param 1
 V
+Style=32768
+
+[Attr]
+ON=0,132,$Param 2
+V
+Style=32768
+
+[Attr]
+ON=0,143,$Param 30
+V
+Style=32768
+
+[Attr]
+ON=0,154,$.P VON
+V=12
+Style=32768
+
+[Attr]
+ON=0,165,$.P VOFF
+V=10
+Style=32768
+
+[Wire]
+Pxs=120,200,176,200
+
+[Wire]
+Pxs=232,240,232,264
+
+[Wire]
+Pxs=120,264,232,264
+
+[Wire]
+Pxs=120,200,120,208
 
 [Comp]
 Name=Ground
-Px=600,136
-Rot=7
-
-[Comp]
-Name=Ground
-Px=512,232
+Px=232,264
 Rot=7
 
 [Comp]
 Name=Resistor
-Px=512,184
-Rot=3
+Px=344,208
+Rot=1
 
 [Attr]
-ON=-24,-25,PART
+ON=8,11,PART
 V=R1
 Style=8192
 
 [Attr]
-ON=-31,-39,RESISTANCE
-V=10k
+ON=8,25,RESISTANCE
+V=100k
 Style=8192
-
-[Attr]
-ON=0,0,PACKAGE
-V
 
 [Wire]
-Pxs=512,136,552,136
+Pxs=344,256,344,264
 
-[Comp]
-Name=Inductor
-Px=512,232
-Rot=5
+[Wire]
+Pxs=232,264,344,264
 
-[Attr]
-ON=11,-26,PART
-V=L1
-Style=8192
+[Wire]
+Pxs=288,200,320,200
 
-[Attr]
-ON=11,-40,INDUCTANCE
-V=100
-Style=8192
+[Wire]
+Pxs=344,200,344,208
 
-[Attr]
-ON=0,0,PACKAGE
-V
+[Wire]
+Pxs=320,200,344,200
+
+[Grid Text]
+Text="Change the VON and VOFF of the Circuit and Check the changes in Graph"
+Px=80,384
+Height=-18
+Color=#000000
+Font=Arial
+GridSnap=True
+JustifyH=Left
+JustifyV=Bottom
+CBorder=None
+
+[Grid Text]
+Text="This subcircuit delivers a "1" signal if the input signal reaches"
+Text="VON. Then, it creates a hysteresis to cutoff the output"
+Text="signal when Vin falls below VOFF."
+Px=96,336
+GridSnap=True
+JustifyH=Left
+JustifyV=Bottom
+CBorder=None
+
+[Grid Text]
+Text="A simple Under Voltage LockOut (UVLO) subcircuit"
+Text="Run Transient Analysis"
+Px=104,96
+FStyle=4
+Color=#800000
+GridSnap=True
+JustifyH=Left
+JustifyV=Bottom
+CBorder=None
+
+[Grid Text]
+Text="In"
+Px=120,200
+GridSnap=True
+JustifyH=Left
+JustifyV=Bottom
+CBorder=None
+
+[Grid Text]
+Text="Out"
+Px=320,200
+GridSnap=True
+JustifyH=Left
+JustifyV=Bottom
+CBorder=None
 
 [Schematic]
 CurrentSection 0=0
@@ -282,7 +377,7 @@ CurrentSection 3=0
 Splitter.xs=0
 Splitter.ys=0
 TextQuad=4099
-Scale=0.25
+Scale=1
 GridUser=10
 ShapeGroups="Main","Euro","DeMorgan","Polarity","Electrolytic","Main1","Main11","GroundArrow"
 CalcRMS=False
@@ -448,7 +543,7 @@ ALIGNBOTTOM=No
 
 [Section]
 Index=0
-Name="Under Voltage Lockout"
+Name="UVLO"
 Type=Main
 Enable=True
 CurrentPage 0=0
@@ -470,9 +565,8 @@ PrinterScale=1
 Scale 0=1
 Scale 1=1
 Scale 2=1
-SB 3=417,144
-Scale 3=0.25
-Px=526,203
+Scale 3=1
+Px=769,243
 WinBackGround Color=#FFFFFF
 Select Color=#FF0000
 Anchor Color=#000000
@@ -563,6 +657,7 @@ Search Color=#FFFF00
 Section=0
 Page=1
 Text=
+Text=
 
 [Text Area]
 Section=0
@@ -585,13 +680,12 @@ SimulationLog=True
 
 [Transient]
 WinID=1
-Window Placement=2,3, -1,-1, -8,-31, 44,0,1029,534
+Window Placement=2,3, -1,-1, -8,-31, 44,0,1029,550
 Font=Height=-15,FStyle=0,Color=#0000FF,Name=Arial
 WinBackGround Color=#FFFFFF
 Select Color=#FF0000
 Anchor Color=#000000
 Select Box Color=#000080
-Window Placement in Probe=0,1, -1,-1, 0,0, 0,0,753,530
 Title=Saturable Core.cir
 AutoTitle=Yes
 Grid Color=#808080
@@ -808,7 +902,7 @@ ALIGNBOTTOM=No
 
 [APage]
 Analysis=Transient
-Name="Main"
+Name="MAIN"
 
 [AC]
 WinID=2
@@ -1046,10 +1140,10 @@ Seed=0
 
 [Limits]
 Analysis=Transient
-TMax=20
+TMax=20m
 TStart=0
-TStep=100m
-NPts=20000
+TStep=100u
+NPts=51
 Temp=27
 RetraceRuns=1
 StateVar=Zero
@@ -1063,11 +1157,11 @@ Analysis=Transient
 Plt=1
 AliasID=4
 XExp=T
-YExp=V(2)
-XRng=20,0
+YExp=V(Out)
+XRng=20m,0
 YRng=6,-1
 Options=LINEARX,LINEARY
-Range Grid X=2
+Range Grid X=2m
 Range Grid Y=1
 Enable=Enable
 CS=Normal
@@ -1088,9 +1182,16 @@ NOFmtY=3
 
 [WaveForm]
 Analysis=Transient
+Plt=2
 AliasID=1
+XExp=T
+YExp=V(In)
+XRng=20m,0
+YRng=15,0
 Options=LINEARX,LINEARY
-Enable=Hide
+Range Grid X=2m
+Range Grid Y=3
+Enable=Enable
 CS=Normal
 Line Color=#008000
 Text Color=#008000
@@ -1146,17 +1247,12 @@ NOFmtY=3
 
 [Limits]
 Analysis=DynamicAC
-Temp=27
-FreqList=1E6
-SliderPer=10
 FirstValueDisplay=Mag
 SecondValueDisplay=PhaseDeg
 PlaceText=True
 
 [Limits]
 Analysis=DynamicDC
-Temp=27
-SliderPer=10
 PlaceText=True
 
 [Pane]

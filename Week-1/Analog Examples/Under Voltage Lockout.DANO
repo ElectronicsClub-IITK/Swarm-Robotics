@@ -1,0 +1,62 @@
+********************************************************************************
+***              Micro-Cap 12.0.2.1 (32 bit) Evaluation Version              ***
+***                                                                          ***
+***                                                                          ***
+***                   Dynamic AC of Under Voltage Lockout                    ***
+***                           17-05-2024 00:40:43                            ***
+********************************************************************************
+
+*****************************************************
+***                Temperature=27                 ***
+*****************************************************
+
+Temperature=27
+
+AC Voltages at Frequency=1e+006 (Mag, Degrees)
+==============================================
+Node         Voltage  Node         Voltage 
+1                0,0  2                0,0 
+
+
+AC values for Resistor (Mag, Degrees)
+=====================================
+Instance:                R1
+
+Power AC Terms:
+PD                      0,0
+
+AC Pin Currents:
+Ir                      0,0
+
+Device Variables:
+tc1                  0.000 
+tc2                  0.000 
+
+
+
+AC values for Inductor (Mag, Degrees)
+=====================================
+Instance:                L1
+
+Power AC Terms:
+PS                      0,0
+
+AC Pin Currents:
+Il                      0,0
+
+Device Variables:
+ic                   0.000 
+
+
+
+AC values for SPICE Source (Mag, Degrees)
+=========================================
+Instance:               V1
+
+Power AC Terms:
+PG                     0,0
+
+AC Pin Currents:
+ISource                0,0
+
+
