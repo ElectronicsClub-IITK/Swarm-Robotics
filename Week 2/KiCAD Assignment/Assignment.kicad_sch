@@ -2151,7 +2151,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "LED_THT:LED_D3.0mm_FlatTop"
 			(at 125.73 77.47 0)
 			(effects
 				(font
@@ -2551,7 +2551,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0201_0603Metric"
 			(at 149.352 86.36 90)
 			(effects
 				(font
@@ -2685,7 +2685,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Connector_PinHeader_1.00mm:PinHeader_1x02_P1.00mm_Vertical"
 			(at 222.25 101.6 0)
 			(effects
 				(font
@@ -2755,7 +2755,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0201_0603Metric"
 			(at 123.952 85.09 90)
 			(effects
 				(font
@@ -2825,7 +2825,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
 			(at 107.6452 78.74 0)
 			(effects
 				(font
@@ -3027,7 +3027,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Custom_Libraray:TP_4056"
 			(at 142.24 77.47 0)
 			(effects
 				(font
@@ -3118,7 +3118,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "LED_THT:LED_D3.0mm_FlatTop"
 			(at 116.84 77.47 0)
 			(effects
 				(font
@@ -3186,7 +3186,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Custom_Libraray:USB_C_Receptacle_PowerOnly_6P"
 			(at 213.36 50.8 0)
 			(effects
 				(font
@@ -3271,7 +3271,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0201_0603Metric"
 			(at 115.062 85.09 90)
 			(effects
 				(font
@@ -3407,7 +3407,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
 			(at 166.0652 77.47 0)
 			(effects
 				(font
