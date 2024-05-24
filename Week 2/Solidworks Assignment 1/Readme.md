@@ -13,8 +13,3 @@ This will be an essential part of the project and hence there are going to be se
 
  Mode of Submission : Export the .sldasm file of the Canon and Upload it onto your repo in your fork. Launch a PR with Assignment No and Name in it.  
 
-## Assignment -2
-
-Design a Slider Crank on Solidworks
-
-- Follow the steps in the Video [Youtube Link](https://www.youtube.com/watch?v=sHu_4yvZCoA&list=WL&index=1&t=43s)
