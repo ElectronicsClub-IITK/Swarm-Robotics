@@ -8,9 +8,9 @@ This is the Code base of the Project Swarm Robotics of Electronics club. This is
 
 The Project involved developing an infrastructure of Swarm Robots that can be used in several use cases with minimal modifications in their Design and Circuitry. 
 We are designing a Multi-Terrain Robot that can maneuver in any terrain and gather critical information. 
-**Developing an in-house PCB
-**Developing an IMU based localization system
-**Developing a system of connecting various such small robots to a mother bot.
+- Developing an in-house PCB
+- Developing an IMU based localization system
+- Developing a system of connecting various such small robots to a mother bot.
 
 ## WEEK 0
 
