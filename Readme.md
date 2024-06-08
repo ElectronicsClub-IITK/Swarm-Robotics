@@ -38,7 +38,7 @@ This reduces errors and optimizes the design before actual prototyping and manuf
 ### KALMAN FILTER
 Kalman filtering (KF) is an optimal estimation algorithm that provides estimates of some unknown variables given the measurements observed over time.
 The gyroscope provides the angular velocity and accelerometers provide linear acceleration . We then combine these two data to improve accuracy by implementing KF.
-#### GNSS-INS Stimulation
+### GNSS-INS Stimulation
 GNSS-INS-SIM is an GNSS/INS simulation project, which generates reference trajectories, IMU sensor output, GPS output, odometer output and magnetometer output.
 It allows users to model and test their algorithms in different scenarios, providing a flexible platform for developing and validating navigation solutions without needing extensive field tests.
 ### PCB Design
